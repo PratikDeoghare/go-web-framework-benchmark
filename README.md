@@ -34,6 +34,7 @@ This benchmark suite aims to compare the performance of Go web frameworks. It is
 * [gin](https://github.com/gin-gonic/gin)
 * [martini](https://github.com/go-martini/martini)
 * [lars](https://github.com/go-playground/lars)
+* [lenrouter](https://github.com/pratikdeoghare/lenrouter)
 * [bone](https://github.com/go-zoo/bone)
 * [gorilla](https://github.com/gorilla/mux)
 * [Gramework](https://github.com/gramework/gramework)

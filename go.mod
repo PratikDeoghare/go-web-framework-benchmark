@@ -58,6 +58,7 @@ require (
 	github.com/pilu/miniassert v0.0.0-20140522125902-bee63581261a // indirect
 	github.com/pilu/traffic v0.5.3
 	github.com/pquerna/ffjson v0.0.0-20190930134022-aa0246cd15f7 // indirect
+	github.com/pratikdeoghare/lenrouter v0.0.0-20200820065033-15de30693112
 	github.com/pressly/chi v4.1.2+incompatible
 	github.com/prometheus/common v0.11.1 // indirect
 	github.com/qiangxue/fasthttp-routing v0.0.0-20160225050629-6ccdc2a18d87

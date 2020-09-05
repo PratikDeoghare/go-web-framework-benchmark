@@ -42,6 +42,7 @@ import (
 	"github.com/gocraft/web"
 	"github.com/gorilla/mux"
 	gowwwrouter "github.com/gowww/router"
+	"github.com/pratikdeoghare/lenrouter"
 	tiny "go101.org/tinyrouter"
 
 	"github.com/ivpusic/neo"
@@ -193,6 +194,8 @@ func main() {
 		starthttpTreeMux()
 	case "lars":
 		startLars()
+	case "lenrouter":
+		startLenrouter()
 	case "lion":
 		startLion()
 	case "macaron":
@@ -917,6 +920,29 @@ func startLars() {
 	mux := lars.New()
 	mux.Get("/hello", larsHandler)
 	http.ListenAndServe(":"+strconv.Itoa(port), mux.Serve())
+}
+
+// lenrouter
+func lenrouterHandler(w http.ResponseWriter, r *http.Request, params lenrouter.Params) {
+	if cpuBound {
+		pow(target)
+	} else {
+
+		if sleepTime > 0 {
+			time.Sleep(sleepTimeDuration)
+		} else {
+			runtime.Gosched()
+		}
+	}
+	w.Write(message)
+}
+func startLenrouter() {
+	mux := lenrouter.New(100, 5, lenrouter.Endpoint{
+		Pattern: "/hello",
+		Handler: lenrouterHandler,
+	})
+
+	http.ListenAndServe(":"+strconv.Itoa(port), mux)
 }
 
 // lion
